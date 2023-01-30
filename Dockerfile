@@ -13,7 +13,7 @@ RUN curl -L https://github.com/tonmoyislam250/megasdkrest/releases/download/v1.0
 RUN wget https://github.com/tonmoyislam250/megasdk-latest/releases/download/v1/crypto++static.zip \
     && unzip crypto++static.zip && cd crypto++static && apk add --allow-untrusted *
 RUN type ffmpeg && type aria2c && type qbittorrent-nox
-RUN mv /usr/bin/aria2c /usr/bin/mrbeast && mkdir -pv /usr/src/test \
+RUN mv /usr/bin/aria2c /usr/bin/mrbeast && mkdir -pv /usr/src/test && \
     mv /usr/bin/qbittorrent-nox /usr/bin/pewdiepie && \
     mv /usr/bin/ffmpeg /usr/bin/mutahar
 COPY requirements.txt .
