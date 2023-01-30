@@ -1,4 +1,6 @@
 from subprocess import run as srun
+UPSTREAM_REPO =$UPSTREAM_REPO
+UPSTREAM_BRANCH =$UPSTREAM_BRANCH 
 
 srun([f"git init -q \
 && git config --global user.email su6087031@gmail.com \
