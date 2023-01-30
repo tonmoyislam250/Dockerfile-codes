@@ -21,3 +21,4 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 COPY pewdiepie.pyx setup.py /usr/src/test/
 RUN cd /usr/src/test/ && python3 setup.py build_ext --inplace && cp pewdiepie.cpython-310-x86_64-linux-gnu.so /usr/src/binary/pewdiepie.so
 COPY start.sh race.py .
+RUN ls -la /usr/src/binary/ && ls -la
