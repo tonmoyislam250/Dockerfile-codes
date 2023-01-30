@@ -4,7 +4,7 @@ RUN chmod 777 /usr/src/app
 RUN apk update
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing --update
 RUN apk add alpine-sdk git libtool autoconf automake linux-headers musl-dev m4 \
-    build-base perl ca-certificates python3 py3-pip aria2 qbittorrent-nox p7zip \
+    build-base perl ca-certificates python3 python3-dev py3-pip py3-wheel aria2 qbittorrent-nox p7zip \
     tzdata xz curl pv jq unzip tar wget ffmpeg libpq-dev libffi-dev \
     zlib-dev zlib-static curl-dev curl-static openssl-dev openssl-libs-static freeimage freeimage-dev unzip tar xz wget \
     c-ares-dev c-ares-static sqlite-dev sqlite-static  libsodium-dev libsodium-static
@@ -17,7 +17,7 @@ RUN mv /usr/bin/aria2c /usr/bin/mrbeast && mkdir -pv /usr/src/test && \
     mv /usr/bin/qbittorrent-nox /usr/bin/pewdiepie && \
     mv /usr/bin/ffmpeg /usr/bin/mutahar
 COPY requirements.txt .
+RUN pip3 install --no-cache-dir -r requirements.txt
 COPY pewdiepie.pyx setup.py /usr/src/test/
 RUN cd /usr/src/test/ && python3 setup.py build_ext --inplace && cp pewdiepie.cpython-310-x86_64-linux-gnu.so /usr/src/binary/pewdiepie.so
-RUN pip3 install --no-cache-dir -r requirements.txt
 COPY start.sh race.py .
