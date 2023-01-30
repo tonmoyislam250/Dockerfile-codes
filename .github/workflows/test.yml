@@ -1,4 +1,4 @@
-name: basic run
+name: For others
 
 on:
   workflow_dispatch
@@ -21,7 +21,7 @@ jobs:
         uses: docker/build-push-action@v2.7.0
         with:
           context: .
-          file: ./Dockerfile
+          file: ./Dockerfile1
           platforms: linux/amd64
           push: true
           tags: ghcr.io/tonmoyislam250/alpinedocker:other
