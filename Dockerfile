@@ -1,6 +1,7 @@
-FROM alpine:3.16
+FROM alpine:latest
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
+RUN cat /etc/os-release
 RUN apk update
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing --update
 RUN apk add alpine-sdk git libtool autoconf automake linux-headers musl-dev m4 \
