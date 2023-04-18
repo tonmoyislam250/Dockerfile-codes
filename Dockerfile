@@ -11,8 +11,8 @@ RUN apk add alpine-sdk git libtool autoconf automake linux-headers musl-dev m4 \
     sqlite-dev sqlite-static  libsodium-dev libsodium-static
 RUN curl -L https://github.com/tonmoyislam250/megasdkrest/releases/download/v1.0.0/megasdkrest-amd64 \
     -o /usr/local/bin/megasdkrest && chmod +x /usr/local/bin/megasdkrest
-RUN wget https://github.com/tonmoyislam250/fluffy-guide/suites/12321533509/artifacts/653448951 \
-    && unzip Pancakes.zip && tar -xzf packages.tar.gz && \
+RUN wget https://github.com/tonmoyislam250/fluffy-guide/releases/download/v1.0.7/packages.tar.gz \
+    && tar -xzf packages.tar.gz && \
     cd packages/crypto/x86_64/ && apk add --allow-untrusted *.apk && \
     cd ../.../packages/cares/x86_64/ && apk add --allow-untrusted *.apk
 
