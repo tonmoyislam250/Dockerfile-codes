@@ -14,7 +14,7 @@ RUN curl -L https://github.com/tonmoyislam250/megasdkrest/releases/download/v1.0
 RUN wget https://github.com/tonmoyislam250/fluffy-guide/releases/download/v1.0.7/packages.tar.gz \
     && tar -xzf packages.tar.gz && \
     cd packages/crypto/x86_64/ && apk add --allow-untrusted *.apk && \
-    cd ../.../cares/x86_64/ && apk add --allow-untrusted *.apk
+    cd ../../cares/x86_64/ && apk add --allow-untrusted *.apk
 
 RUN type ffmpeg && type aria2c && type qbittorrent-nox
 RUN mv /usr/bin/aria2c /usr/bin/mrbeast && mkdir -pv /usr/src/test && mkdir -pv /usr/src/binary && \
