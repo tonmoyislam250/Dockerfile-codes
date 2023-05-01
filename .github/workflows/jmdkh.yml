@@ -1,4 +1,4 @@
-name: For others
+name: For jmdkh
 
 on:
   workflow_dispatch
@@ -24,4 +24,4 @@ jobs:
           file: ./Dockerfile1
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/tonmoyislam250/alpinedocker:other
+          tags: ghcr.io/tonmoyislam250/alpinedocker:jmdkh
