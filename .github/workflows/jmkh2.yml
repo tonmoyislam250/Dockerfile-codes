@@ -1,4 +1,4 @@
-name: For heroku(other mega)
+name: For jmdkh v2
 
 on:
   workflow_dispatch
@@ -24,4 +24,4 @@ jobs:
           file: ./Dockerfile2
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/tonmoyislam250/alpinedocker:mega
+          tags: ghcr.io/tonmoyislam250/alpinedocker:jmdkh2
