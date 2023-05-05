@@ -13,10 +13,10 @@ RUN apk add alpine-sdk git rclone libtool autoconf automake linux-headers musl-d
     gawk  libpthread-stubs libjpeg-turbo-dev py3-virtualenv libffi \
     dpkg cmake icu-data-full apk-tools \
     nodejs coreutils npm bash-completion bash-doc \
-    && npm install -g localtunnel kill-port \
     speedtest-cli mediainfo bash \
     musl-utils gcompat libmagic \
-    sqlite-dev sqlite-static  libsodium-dev libsodium-static
+    sqlite-dev sqlite-static  libsodium-dev libsodium-static \
+    && npm install -g localtunnel kill-port 
 
 RUN wget https://github.com/tonmoyislam250/fluffy-guide/releases/download/v1.0.7/packages.tar.gz \
     && tar -xzf packages.tar.gz && \
