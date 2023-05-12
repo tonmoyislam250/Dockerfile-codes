@@ -9,7 +9,7 @@ RUN apk add alpine-sdk git libtool autoconf automake linux-headers musl-dev m4 \
     tzdata xz curl pv jq unzip tar wget ffmpeg libpq-dev libffi-dev \
     zlib-dev zlib-static curl-dev curl-static openssl-dev openssl-libs-static freeimage freeimage-dev unzip tar xz wget \
     sqlite-dev sqlite-static  libsodium-dev libsodium-static
-RUN curl -L https://github.com/tonmoyislam250/megasdkrest/releases/download/v4.6.0/megasdkrest-amd64 \
+RUN curl -L https://github.com/tonmoyislam250/megasdkrest/releases/download/v4.8.1/megasdkrest-amd64 \
     -o /usr/local/bin/megasdkrest && chmod +x /usr/local/bin/megasdkrest
 RUN wget https://github.com/tonmoyislam250/fluffy-guide/releases/download/v1.0.7/packages.tar.gz \
     && tar -xzf packages.tar.gz && \
