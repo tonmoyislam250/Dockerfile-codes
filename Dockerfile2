@@ -36,8 +36,7 @@ RUN echo -e "\e[32m[INFO]: Installing Cloudflared Tunnel.\e[0m" && \
 
 RUN echo -e "\e[32m[INFO]: Building and Installing MegaSdkC++.\e[0m" && \
     git clone https://github.com/meganz/sdk.git ~/home/sdk && \
-    git checkout v4.8.0 && \
-    cd ~/home/sdk && rm -rf .git && \
+    cd ~/home/sdk && git checkout v4.8.0 && rm -rf .git && \
     autoupdate -fIv && ./autogen.sh && \
     ./configure CFLAGS='-fpermissive' CXXFLAGS='-fpermissive' CPPFLAGS='-fpermissive' CCFLAGS='-fpermissive' \
     --disable-silent-rules --enable-python --with-sodium --disable-examples --with-python3 && \
