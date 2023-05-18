@@ -19,6 +19,7 @@ psutil
 psycopg2-binary
 pybase64
 pyrogram
+pymongo
 python-dotenv
 python-magic
 python-telegram-bot==13.15
