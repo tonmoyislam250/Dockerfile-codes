@@ -16,7 +16,7 @@ google-api-python-client
 google-auth-httplib2
 google-auth-oauthlib
 gunicorn
-git+https://github.com/zevtyardt/lk21.git
+git+https://github.com/tonmoyislam250/lk21.git
 httpx
 lxml
 motor
@@ -37,3 +37,4 @@ tgcrypto
 uvloop
 xattr
 yt-dlp
+cython
