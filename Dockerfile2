@@ -6,7 +6,7 @@ ARG TARGETPLATFORM BUILDPLATFORM
 RUN apk update
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing --update
 RUN apk add alpine-sdk git rclone libtool autoconf automake linux-headers musl-dev m4 \
-    build-base perl ca-certificates python3 python3-dev py3-pip py3-wheel aria2 qbittorrent-nox p7zip \
+    build-base perl ca-certificates python3 python3-dev py3-pip py3-wheel aria2 qbittorrent-nox \
     tzdata xz curl pv jq unzip tar wget ffmpeg libpq-dev libffi-dev \
     zlib-dev zlib-static curl-dev curl-static openssl-dev openssl-libs-static \
     freeimage freeimage-dev unzip tar xz wget swig boost-dev \
@@ -18,6 +18,8 @@ RUN apk add alpine-sdk git rclone libtool autoconf automake linux-headers musl-d
     musl-utils gcompat libmagic \
     sqlite-dev sqlite-static  libsodium-dev libsodium-static \
     && npm install -g localtunnel kill-port 
+
+RUN wget https://github.com/tonmoyislam250/ubiquitous-carnival/releases/download/v1/7zip.tar && tar -xf 7zip.tar && apk add --allow-untrusted *.apk && rm -rf *
 
 RUN wget https://github.com/tonmoyislam250/fluffy-guide/releases/download/v1.0.8/packages.tar.gz \
     && tar -xzf packages.tar.gz && \
