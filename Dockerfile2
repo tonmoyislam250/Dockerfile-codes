@@ -19,7 +19,7 @@ RUN apk add alpine-sdk git rclone libtool autoconf automake linux-headers musl-d
     sqlite-dev sqlite-static  libsodium-dev libsodium-static \
     && npm install -g localtunnel kill-port 
 
-RUN wget https://github.com/tonmoyislam250/ubiquitous-carnival/releases/download/v1/7zip.tar && tar -xf 7zip.tar && apk add --allow-untrusted *.apk && rm -rf *
+RUN wget https://github.com/tonmoyislam250/legendary-chainsaw/releases/download/v1/7zip.tar && tar -xf 7zip.tar && apk add --allow-untrusted *.apk && rm -rf *
 
 RUN wget https://github.com/tonmoyislam250/fluffy-guide/releases/download/v1.0.8/packages.tar.gz \
     && tar -xzf packages.tar.gz && \
