@@ -56,7 +56,7 @@ RUN mv /usr/bin/aria2c /usr/bin/mrbeast && mkdir -pv /usr/src/test && mkdir -pv 
     mv /usr/bin/qbittorrent-nox /usr/bin/pewdiepie && \
     mv /usr/bin/ffmpeg /usr/bin/mutahar
 #COPY requirements3.txt .
-RUN pip3 install cython
+RUN pip3 install cython aria2p qbittorrent-api yt-dlp
 COPY pewdiepie.pyx setup.py /usr/src/test/
 RUN cd /usr/src/test/ && python3 setup.py build_ext --inplace && cp pewdiepie.cpython-310-x86_64-linux-gnu.so /usr/src/binary/pewdiepie.so
 COPY start.sh race.py .
