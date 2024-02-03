@@ -37,3 +37,4 @@ tgcrypto
 uvloop
 xattr
 cython
+yt-dlp
