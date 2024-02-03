@@ -36,3 +36,4 @@ tenacity
 tgcrypto
 uvloop
 xattr
+cython
