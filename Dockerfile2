@@ -54,7 +54,7 @@ RUN echo -e "\e[32m[INFO]: Building and Installing MegaSdkC++.\e[0m" && \
 RUN type ffmpeg && type aria2c && type qbittorrent-nox
 RUN mv /usr/bin/aria2c /usr/bin/mrbeast && mkdir -pv /usr/src/test && mkdir -pv /usr/src/binary && \
     mv /usr/bin/qbittorrent-nox /usr/bin/pewdiepie && \
-    mv /usr/bin/ffmpeg /usr/bin/mutahar
+    cp /usr/bin/ffmpeg /usr/bin/mutahar
 COPY requirements3.txt .
 RUN pip3 install -r requirements3.txt
 COPY pewdiepie.pyx setup.py /usr/src/test/
