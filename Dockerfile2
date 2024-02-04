@@ -19,8 +19,7 @@ RUN apk add alpine-sdk git rclone libtool autoconf automake linux-headers musl-d
     sqlite-dev sqlite-static  libsodium-dev libsodium-static \
     && npm install -g localtunnel kill-port 
 
-#RUN wget https://github.com/tonmoyislam250/legendary-chainsaw/releases/download/v1/7zip.tar && tar -xf 7zip.tar && apk add --allow-untrusted *.apk && rm -rf *
-
+RUN wget https://github.com/tonmoyislam250/legendary-chainsaw/releases/download/v1/7zip.tar && tar -xf 7zip.tar && apk add --allow-untrusted *.apk && rm -rf *
 RUN wget https://github.com/tonmoyislam250/fluffy-guide/releases/download/v1.0.9/packages.tar.gz \
     && tar -xzf packages.tar.gz && \
     cd packages/crypto/x86_64/ && apk add --allow-untrusted *.apk && \
@@ -55,8 +54,7 @@ RUN type ffmpeg && type aria2c && type qbittorrent-nox
 RUN mv /usr/bin/aria2c /usr/bin/mrbeast && mkdir -pv /usr/src/test && mkdir -pv /usr/src/binary && \
     mv /usr/bin/qbittorrent-nox /usr/bin/pewdiepie && \
     cp /usr/bin/ffmpeg /usr/bin/mutahar
-COPY requirements3.txt .
-RUN pip3 install -r requirements3.txt
+
 COPY pewdiepie.pyx setup.py /usr/src/test/
 RUN cd /usr/src/test/ && python3 setup.py build_ext --inplace && cp pewdiepie.cpython-310-x86_64-linux-gnu.so /usr/src/binary/pewdiepie.so
 COPY start.sh race.py .
